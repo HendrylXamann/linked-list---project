@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de colaboradores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='m_users.css') }}">
+</head>
+
+<body>
+    <div style=" background: linear-gradient(90.22deg, #FFFFFF -47.1%, #8a2bca 122.42%);">
+        <menu>
+            <a href="/">
+                <img src="{{url_for('static', filename='logo.png')}}">
+            </a>
+            <div class="buttons-menu-wrapper">
+                <a class="menu-button" href="{{ url_for('infos') }}">
+                    Orientações de uso
+                </a>
+            </div>
+        </menu>
+    </div>
+
+    <div class="backgroundWrapperRegisterUser">
+        <h1 class="titleWrapper">Criar usuário</h1>
+        <form action="/registro_usuarios" method="post">
+            <div class="containerApp">
+                <div class="contentRegisterUser">
+                    <div class="inputsRegisterUserWrapper">
+                        <div class="inputWrapperUser">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+
+                        <div class="inputWrapperUser">
+                            <label for="tipo_veiculo">Veículo:</label>
+                            <input type="text" id="veiculo" name="veiculo" required>
+                        </div>
+
+                        <div class="inputWrapperUser">
+                            <label for="validar_cnh">CNH Válida:</label>
+                            <select id="validar_cnh" name="validar_cnh" required>
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script type="text/javascript" src="m_users.js"> </script>
+</body>
+
+</html>
