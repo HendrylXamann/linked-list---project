@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciamento de Rotas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='r_manager.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
 </head>
+
 <body>
     <div style=" background: linear-gradient(90.22deg, #FFFFFF -47.1%, #8a2bca 122.42%);">
         <menu>
             <a href="/">
-                <img src="{{url_for('static', filename='logo.png')}}">
+                <img src="{{url_for('static', filename='logo2.png')}}" style="max-width: 300px; max-height: 50px;">
             </a>
             <div class="buttons-menu-wrapper">
-                <a class="menu-button" href="{{ url_for('infos') }}">
+                <a class="menu-button" href="/manual">
                     Orientações de uso
                 </a>
             </div>
@@ -22,6 +25,28 @@
     </div>
     <div class="container">
         <h1>Gerenciamento de Rotas</h1>
+        <div class="content">
+            <h3>Funcionários</h3>
+            <p>Nome: {{ nome }}</p>
+            <p>Veículo: {{ veiculo }}</p>
+            <p>CNH: {{ cnh }}</p>
+            <div class="form">
+                <form id="form-rota">
+                    <label for="prioridade">Prioridade</label>
+                    <select type="number" id="prioridade" name="prioridade" required>
+                        <option value="" disabled selected>Selecione uma prioridade</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <label for="funcionario">Funcionário</label>
+                    <select id="funcionario" name="funcionario" required>
+                        <option value="" disabled selected>Selecione um funcionário</option>
+                    </select>
+                    <button type="submit">Adicionar</button>
+                </form>
+            </div>
+        </div>
 
         <table id="tabela-rotas">
             <thead>
@@ -33,10 +58,11 @@
                 </tr>
             </thead>
             <tbody>
-                </tbody>
+            </tbody>
         </table>
     </div>
 
     <script type="text/javascript" src="r_manager.js"> </script>
 </body>
+
 </html>

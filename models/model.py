@@ -1,4 +1,3 @@
-
 class Criar_usuario():
     def __init__(self,nome,veiculo,cnh):
         self.nome = nome
@@ -6,11 +5,26 @@ class Criar_usuario():
         self.cnh = cnh
         self.proximo = None #Padrão papai
 
-    def adicionar_usuario(self, novo_usuario):
-        if self.proximo is None:
-            self.proximo = novo_usuario
+    # def adicionar_usuario(self, novo_usuario):
+    #     if self.proximo is None:
+    #         self.proximo = novo_usuario
+    #     else:
+    #         self.proximo.adicionar_usuario(novo_usuario)
+
+class Lista_Usuarios:
+    def __init__(self):
+        self.cabeca = None
+        self.atual = None
+
+    def adicionar_usuario(self, nome, veiculo, cnh):
+        novo_usuario = Criar_usuario(nome, veiculo, cnh)
+        if self.cabeca is None:
+            self.cabeca = novo_usuario
         else:
-            self.proximo.adicionar_usuario(novo_usuario)
+            atual = self.cabeca
+            while atual.proximo is not None:
+                atual = atual.proximo
+            atual.proximo = novo_usuario
 
 class Rotas():
     def __init__(self,id,prioridade,funcionario):

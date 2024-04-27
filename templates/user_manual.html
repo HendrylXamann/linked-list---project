@@ -6,39 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informações de uso</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles_infos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='m_users.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
 </head>
 
 <body>
     <div style=" background: linear-gradient(90.22deg, #FFFFFF -47.1%, #8a2bca 122.42%);">
         <menu>
             <a href="/">
-                <img src="{{url_for('static', filename='logo.png')}}">
+                <img src="{{url_for('static', filename='logo2.png')}}" style="max-width: 300px; max-height: 50px;">
             </a>
-            <div class="buttons-menu-wrapper">
-                <a class="menu-button" href="{{ url_for('home') }}">
-                    Home
-                </a>
-            </div>
         </menu>
     </div>
 
     <div class="backgroundWrapper">
-        <div class="headerWrapper">
+        <!-- <div class="headerWrapper">
             <h2>Orientações de uso</h2>
-        </div>
+        </div> -->
 
         <div class="containerApp">
             <div class="content">
+                <h2>Orientações de uso</h2>
                 <ul id="Descricao">
                     <li>Neste aplicação você pode criar usuários e administrar rotas.</li>
-                    <li>Para criar usuários basta clicar nesta opção, disponibilizada na Home Page e preencher todos os campos.</li>
-                    <li>Na opção de administrar rotas você pode definir usuários as respectivas rotas, ordenar por prioridade, inserir e excluir rotas. Todas as possibilidades terão um botão visível.</li>
+                    <li>Para criar usuários basta clicar nesta opção, disponibilizada na Home Page e preencher todos os
+                        campos.</li>
+                    <li>Na opção de administrar rotas você pode definir usuários as respectivas rotas, ordenar por
+                        prioridade, inserir e excluir rotas. Todas as possibilidades terão um botão visível.</li>
                 </ul>
             </div>
         </div>
     </div>
-
-    <script src="{{ url_for('static', filename='u_manual.js') }}"></script>
 </body>
+
 </html>
