@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivos para eu tirar 10</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles_infos.css') }}">
+</head>
+
+<body>
+    <div style=" background: linear-gradient(90.22deg, #FFFFFF -47.1%, #8a2bca 122.42%);">
+        <menu>
+            <a href="/">
+                <img src="{{url_for('static', filename='logo.png')}}">
+            </a>
+            <div class="buttons-menu-wrapper">
+                <a class="menu-button" href="{{ url_for('home') }}">
+                    Home
+                </a>
+            </div>
+        </menu>
+    </div>
+
+    <div class="backgroundWrapper">
+        <div class="headerWrapper">
+            <h2>Motivos para eu tirar 10</h2>
+        </div>
+
+        <div class="containerApp">
+            <div class="content">
+                <ul id="Descricao">
+                    <li>Programa não fecha abruptamente e executa (Senão nós não estariamos aqui), logo não estou
+                        zerado.</li>
+                    <li>A visualização dos dados demonstra que o programa consumiu a lista encadeada, logo já tenho 2
+                        pontos.</li>
+                    <li>Quando criamos uma nova rota ou novo usuários isso é adaptar os atributos da clase da lista para
+                        o contexto, logo já tenho 4 pontos.</li>
+                    <li>Quando excluimos uma rota estamos adaptando uma operação da lista, logo já tenho 6 pontos. </li>
+                    <li>Já podemos excluir e alterar a ordem de prioridade uma rota e nisso estamos adaptando 2
+                        operações da lista, logo já tenho 8 pontos. </li>
+                    <li>Estamos vendo todas essas funcionalidades em uma aplicação construida no Flask, logo mereço 10
+                        pontos. </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='u_manual.js') }}"></script>
+</body>
+
+</html>
