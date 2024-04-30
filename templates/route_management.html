@@ -25,11 +25,48 @@
     </div>
     <div class="container">
         <h1>Gerenciamento de Rotas</h1>
+        <form method="POST" action="/routes">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Rota</th>
+                        <th>Prioridade</th>
+                        <th>Funcionário</th>
+                        <th>Excluir</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for rota in rotas %}
+                    <tr>
+                        <td>{{ rota.id }}</td>
+                        <td>
+                            <select name="prioridade" required>
+                                <option value="1" {% if rota.prioridade == 1 %} selected {% endif %}>1</option>
+                                <option value="2" {% if rota.prioridade == 2 %} selected {% endif %}>2</option>
+                                <option value="3" {% if rota.prioridade == 3 %} selected {% endif %}>3</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select name="funcionario" required>
+                                {% for funcionario in funcionarios %}
+                                <option value="{{ funcionario }}" {% if rota.funcionario == funcionario %} selected {% endif %}>{{ funcionario }}</option>
+                                {% endfor %}
+                            </select>
+                        </td>
+                        <td>
+                            <input type="hidden" name="id_rota" value="{{ rota.id }}">
+                            <button type="submit">Alterar</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </form>
+    </div>
+    
+    <!-- <div class="container">
+        <h1>Gerenciamento de Rotas</h1>
         <div class="content">
-            <h3>Funcionários</h3>
-            <p>Nome: {{ nome }}</p>
-            <p>Veículo: {{ veiculo }}</p>
-            <p>CNH: {{ cnh }}</p>
             <div class="form">
                 <form id="form-rota">
                     <label for="prioridade">Prioridade</label>
@@ -42,6 +79,7 @@
                     <label for="funcionario">Funcionário</label>
                     <select id="funcionario" name="funcionario" required>
                         <option value="" disabled selected>Selecione um funcionário</option>
+                        <option value="{{ nome }}" >{{ nome }}</option>
                     </select>
                     <button type="submit">Adicionar</button>
                 </form>
@@ -63,6 +101,6 @@
     </div>
 
     <script type="text/javascript" src="r_manager.js"> </script>
-</body>
+</body> -->
 
 </html>

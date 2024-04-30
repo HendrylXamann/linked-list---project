@@ -26,6 +26,17 @@ class Lista_Usuarios:
                 atual = atual.proximo
             atual.proximo = novo_usuario
 
+class ListaRotas:
+    def __init__(self):
+        self.rotas = [
+            Rotas(id=1, prioridade=3, funcionario="Schopenhauer"),
+            Rotas(id=2, prioridade=2, funcionario="Schopenhauer"),
+            Rotas(id=3, prioridade=1, funcionario="Schopenhauer"),
+            Rotas(id=4, prioridade=3, funcionario="Schopenhauer")
+        ]
+
+
+
 class Rotas():
     def __init__(self,id,prioridade,funcionario):
         self.id = id
@@ -51,19 +62,19 @@ class Rotas():
         else:
             pass
 
-class Adicionar_Rota:
-    """
-    Modo de uso: lista_rotas = Rotas()
-    adicionar_rota = Adicionar_Rota(lista_rotas)
-    adicionar_rota.add_nova_rota(1, 1, "João")
-    """
-    def __init__(self, lista_rotas):
-        self.lista_rotas = lista_rotas
-        self.proximo = None 
+# class Adicionar_Rota:
+#     """
+#     Modo de uso: lista_rotas = Rotas()
+#     adicionar_rota = Adicionar_Rota(lista_rotas)
+#     adicionar_rota.add_nova_rota(1, 1, "João")
+#     """
+#     def __init__(self, lista_rotas):
+#         self.lista_rotas = lista_rotas
+#         self.proximo = None 
 
-    def add_nova_rota(self, id, prioridade, funcionario):
-        nova_rota = Rotas(id, prioridade, funcionario)
-        if self.lista_rotas.proximo is None:
-            self.lista_rotas.proximo = nova_rota
-        else:
-            self.lista_rotas.proximo.adicionar_nova_rota(nova_rota)
+#     def add_nova_rota(self, id, prioridade, funcionario):
+#         nova_rota = Rotas(id, prioridade, funcionario)
+#         if self.lista_rotas.proximo is None:
+#             self.lista_rotas.proximo = nova_rota
+#         else:
+#             self.lista_rotas.proximo.adicionar_nova_rota(nova_rota)

@@ -19,6 +19,7 @@ logging.basicConfig(
 usuarios = Lista_Usuarios()
 usuarios.adicionar_usuario("Schopenhauer", "moto", "sim")
 
+
 @app.route("/")
 def home():
     return render_template('home.html')
@@ -42,16 +43,27 @@ def create_user():
     return render_template("manage_users.html")
 
 
-@app.route("/routes")
+@app.route("/routes", methods=["GET", "POST"])
 def route_management():
+    rotas = ListaRotas()
+    rotas_obj = Rotas()
+    if request.method == "POST":
+        prioridade = int(request.form.get("prioridade"))
+        funcionario = request.form.get("funcionario")
+        id_rota = int(request.form.get("id_rota"))
+        for rota in rotas.rotas:
+            if id_rota == rotas_obj.id:
+                rota.alterar_prioridade(prioridade)
+                rota.alterar_funcionario(funcionario)
 
-    atual = usuarios.cabeca
-    while atual is not None:
-        nome = atual.nome
-        veiculo = atual.veiculo
-        cnh = atual.cnh
-        atual = atual.proximo
-    return render_template("route_management.html", nome=nome, veiculo=veiculo, cnh=cnh)
+
+    # atual = usuarios.cabeca
+    # while atual is not None:
+    #     nome = atual.nome
+    #     veiculo = atual.veiculo
+    #     cnh = atual.cnh
+    #     atual = atual.proximo
+    return render_template("route_management.html", rotas=rotas, funcionarios=usuarios)
 
 
 if __name__ == '__main__':
