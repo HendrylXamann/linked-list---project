@@ -4,7 +4,7 @@ Este é um projeto feito em Python utilizando Flask com o objetivo de demonstrar
 
 ## Instalação
 
-Antes de começar, certifique-se de ter o Python e o pip instalados em seu sistema. Em seguida, siga estas etapas:
+Antes de começar, certifique-se de ter acesso à internet, o Python e o pip instalados em seu sistema. Em seguida, siga estas etapas:
 
 1. Navegue até o diretório do projeto:
 

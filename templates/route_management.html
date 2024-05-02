@@ -8,6 +8,8 @@
     <title>Gerenciamento de Rotas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='r_manager.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,10 +28,10 @@
     <div class="container">
         <h1>Gerenciamento de Rotas</h1>
         <form method="POST" action="/routes">
-            <table>
+            <table id="tableRow" class="table">
                 <thead>
                     <tr>
-                        <th>ID Rota</th>
+                        <th>ID</th>
                         <th>Prioridade</th>
                         <th>Funcionário</th>
                         <th>Excluir</th>
@@ -41,66 +43,32 @@
                         <td>{{ rota.id }}</td>
                         <td>
                             <select name="prioridade" required>
-                                <option value="1" {% if rota.prioridade == 1 %} selected {% endif %}>1</option>
-                                <option value="2" {% if rota.prioridade == 2 %} selected {% endif %}>2</option>
-                                <option value="3" {% if rota.prioridade == 3 %} selected {% endif %}>3</option>
+                                <option value="1" {% if rota.prioridade==1 %} selected {% endif %}>1</option>
+                                <option value="2" {% if rota.prioridade==2 %} selected {% endif %}>2</option>
+                                <option value="3" {% if rota.prioridade==3 %} selected {% endif %}>3</option>
                             </select>
                         </td>
                         <td>
                             <select name="funcionario" required>
                                 {% for funcionario in funcionarios %}
-                                <option value="{{ funcionario }}" {% if rota.funcionario == funcionario %} selected {% endif %}>{{ funcionario }}</option>
+                                <option value="{{ funcionario }}" {% if rota.funcionario==funcionario %} selected {%
+                                    endif %}>{{ funcionario }}</option>
                                 {% endfor %}
                             </select>
                         </td>
                         <td>
-                            <input type="hidden" name="id_rota" value="{{ rota.id }}">
-                            <button type="submit">Alterar</button>
+                            <input type="checkbox" name="excluir" value="{{ rota.id }}">
                         </td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+            <br>
+            <button type="button" class="btn btn-primary"
+                style="background-color: #5f2172; display: block; margin: 0 auto;">Alterar</button>
         </form>
     </div>
-    
-    <!-- <div class="container">
-        <h1>Gerenciamento de Rotas</h1>
-        <div class="content">
-            <div class="form">
-                <form id="form-rota">
-                    <label for="prioridade">Prioridade</label>
-                    <select type="number" id="prioridade" name="prioridade" required>
-                        <option value="" disabled selected>Selecione uma prioridade</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                    </select>
-                    <label for="funcionario">Funcionário</label>
-                    <select id="funcionario" name="funcionario" required>
-                        <option value="" disabled selected>Selecione um funcionário</option>
-                        <option value="{{ nome }}" >{{ nome }}</option>
-                    </select>
-                    <button type="submit">Adicionar</button>
-                </form>
-            </div>
-        </div>
 
-        <table id="tabela-rotas">
-            <thead>
-                <tr>
-                    <th>ID Rota</th>
-                    <th>Prioridade</th>
-                    <th>Funcionário</th>
-                    <th>Excluir</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </div>
-
-    <script type="text/javascript" src="r_manager.js"> </script>
-</body> -->
+</body>
 
 </html>

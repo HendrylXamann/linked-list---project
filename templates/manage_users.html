@@ -25,7 +25,7 @@
 
     <div class="backgroundWrapperRegisterUser">
         <h1 class="titleWrapper">Criar usuário</h1>
-        <form action="/registro_usuarios" method="post">
+        <form action="/create_user" method="post">
             <div class="containerApp">
                 <div class="contentRegisterUser">
                     <div class="inputsRegisterUserWrapper">
@@ -59,8 +59,14 @@
             </div>
         </form>
     </div>
-
-    <script type="text/javascript" src="m_users.js"> </script>
 </body>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        var mensagem = "{{ message }}";
+        if (mensagem) {
+            alert(mensagem);
+        }
+    });
+</script>
 
 </html>

@@ -125,6 +125,10 @@ input[type="date"] {
     margin-bottom: 32px;
 }
 
+.btn-alterar {
+    background-color: #5f2172;
+}
+
 .buttonsContent {
     display: flex;
     gap: 16px;
@@ -158,9 +162,9 @@ input[type="date"] {
     border-collapse: collapse;
 }
 
-.tableRow th {
-    padding: 16px;
-    white-space: nowrap;
+#tableRow th {
+    padding: 10px;
+    /* white-space: nowrap; */
 }
 
 .tableColumn {
