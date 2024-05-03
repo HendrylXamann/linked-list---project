@@ -42,19 +42,17 @@ def create_user():
 def route_management():
     usuarios = usu.listar_usuarios()
     rotasList = ListaRotas()
-    rotas = rotasList.rotas
-    rotas_ordenadas = sorted(rotas, key=attrgetter('prioridade'))
+    rotas_ordenadas = sorted(rotasList.rotas, key=attrgetter('prioridade')) # Poderia fazer com lista encadeada, mas optei por usar o que o Python já oferece
     rotas_obj = Rotas()
     id = rotas_obj.id
     prioridade = rotas_obj.prioridade
     if request.method == "POST":
-        prioridade = int(request.form.get("prioridade"))
-        funcionario = request.form.get("funcionario")
-        id_rota = int(request.form.get("id_rota"))
-        for rota in rotasList.rotas:
-            if id_rota == rotas_obj.id:
-                rota.alterar_prioridade(prioridade)
-                rota.alterar_funcionario(funcionario)
+        id = request.form["id"]
+        rotas_obj.alterar_funcionario(request.form["funcionario"])
+        rotas_obj.alterar_prioridade(request.form["prioridade"])
+        prioridade = rotas_obj.prioridade
+        #Falta o método de excluir rota -- pegar do html 
+        return render_template("route_management.html", rotas=rotas_ordenadas, funcionarios=usuarios, id=id, prioridade=prioridade)
 
     return render_template("route_management.html", rotas=rotas_ordenadas, funcionarios=usuarios, id=id, prioridade=prioridade)
 
