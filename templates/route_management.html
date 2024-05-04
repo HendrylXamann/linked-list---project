@@ -42,14 +42,14 @@
                     <tr>
                         <td>{{ rota.id }}</td>
                         <td>
-                            <select name="prioridade" required>
+                            <select name="prioridade_{{ rota.id }}" required>
                                 <option value="1" {% if rota.prioridade==1 %} selected {% endif %}>1</option>
                                 <option value="2" {% if rota.prioridade==2 %} selected {% endif %}>2</option>
                                 <option value="3" {% if rota.prioridade==3 %} selected {% endif %}>3</option>
                             </select>
                         </td>
                         <td>
-                            <select name="funcionario" required>
+                            <select name="funcionario_{{ rota.id }}" required>
                                 {% for funcionario in funcionarios %}
                                 <option value="{{ funcionario }}" {% if rota.funcionario==funcionario %} selected {%
                                     endif %}>{{ funcionario }}</option>
@@ -57,18 +57,27 @@
                             </select>
                         </td>
                         <td>
-                            <input type="checkbox" name="excluir" value="{{ rota.id }}">
+                            <input type="checkbox" name="excluir_{{ rota.id }}" value="true">
                         </td>
+                        <input type="hidden" name="id_{{ rota.id }}" value="{{ rota.id }}">
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
             <br>
-            <button type="button" class="btn btn-primary"
-                style="background-color: #5f2172; display: block; margin: 0 auto;">Alterar</button>
+            <button type="submit" class="btn btn-primary"
+                style="background-color: #5f2172; display: block; margin: 0 auto;" id="reloadButton">Alterar</button>
         </form>
     </div>
 
 </body>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        var mensagem = "{{ message }}";
+        if (mensagem) {
+            alert(mensagem);
+        }
+    });
+</script>
 
 </html>

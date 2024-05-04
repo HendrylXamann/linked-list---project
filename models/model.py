@@ -1,4 +1,5 @@
-class Criar_usuario():
+#Dsclp por ter saido do padrão do inglês
+class Criar_usuario:
     def __init__(self,nome,veiculo,cnh):
         self.nome = nome
         self.veiculo = veiculo
@@ -31,35 +32,52 @@ class Lista_Usuarios:
             atual = atual.proximo
         return usuarios
 
-class ListaRotas:
-    def __init__(self):
-        self.rotas = [
-            Rotas(id=1, prioridade=3, funcionario="Schopenhauer"),
-            Rotas(id=2, prioridade=2, funcionario="Schopenhauer"),
-            Rotas(id=3, prioridade=1, funcionario="Schopenhauer"),
-            Rotas(id=4, prioridade=3, funcionario="Schopenhauer")
-        ]
-
-class Rotas():
-    def __init__(self,id=None, prioridade=None, funcionario=None):
+class Rotas:
+    def __init__(self, id, prioridade, funcionario):
         self.id = id
         self.prioridade = prioridade
         self.funcionario = funcionario
-        self.proximo = None 
+        self.proximo = None
     
     def alterar_prioridade(self, nova_prioridade):
-        if nova_prioridade in (1, 2, 3):
-            self.prioridade = nova_prioridade
+        self.prioridade = nova_prioridade
     
-    def alterar_funcionario(self, novo_func):
-        self.funcionario = novo_func
+    def alterar_funcionario(self, novo_funcionario):
+        self.funcionario = novo_funcionario
 
-    def excluir_rota(self):
-        """
-        A próxima rota vai continuar apontando para o próximo elemento da lista;
-        """
-        if self.proximo is not None:
-            self.proximo.excluir_rota()
+class ListaRotas:
+    def __init__(self):
+        self.primeira_rota = None
+    
+    def adicionar_rota(self, nova_rota):
+        if not self.primeira_rota:
+            self.primeira_rota = nova_rota
         else:
-            pass
+            rota_atual = self.primeira_rota
+            while rota_atual.proximo:
+                rota_atual = rota_atual.proximo
+            rota_atual.proximo = nova_rota
+    
+    def remover_rota(self, id):
+        rota_atual = self.primeira_rota
+        rota_anterior = None
 
+        while rota_atual:
+            if rota_atual.id == id:
+                if rota_anterior:
+                    rota_anterior.proximo = rota_atual.proximo
+                else:
+                    self.primeira_rota = rota_atual.proximo
+                return True
+            rota_anterior = rota_atual
+            rota_atual = rota_atual.proximo
+        
+        return False
+    
+    def listar_rotas(self):
+        rotas = []
+        rota_atual = self.primeira_rota
+        while rota_atual:
+            rotas.append(rota_atual)
+            rota_atual = rota_atual.proximo
+        return rotas

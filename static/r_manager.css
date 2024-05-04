@@ -1,5 +1,3 @@
-/* static/styles_resultados.css */
-
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -8,19 +6,9 @@ body {
     color: #333;
 }
 
-.backgroundWrapper {
-    background-color: #ecfdf3;
-    height: calc(100vh - 108px);
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-.containerApp {
-    margin: 0 auto !important;
-    max-width: 90vw;
-    background-color: #fff;
-    border-radius: 16px;
-
+img {
+    height: 20vh;
+    margin-left: 1.5vh;
 }
 
 .content {
@@ -46,35 +34,6 @@ body {
     text-decoration: none;
 }
 
-.clear-filters-button {
-    cursor: pointer;
-    color: #fff;
-    background-color: #808080;
-    /* Cinza */
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    border: none;
-    height: 39px;
-    text-decoration: none;
-}
-
-.clear-filters-button:hover {
-    color: #fff;
-    background-color: #696969;
-    /* Cinza escuro */
-    text-decoration: none;
-}
-
-h2 {
-    color: #209e52;
-    margin: 0;
-}
-
-label {
-    cursor: pointer;
-    display: block;
-    margin-bottom: 8px;
-}
 
 select {
     width: fit-content;
@@ -85,53 +44,8 @@ select {
     box-sizing: border-box;
 }
 
-p {
-    text-align: center;
-}
-
-#filtrosResultados {
-    display: flex;
-    justify-content: left;
-    align-items: flex-end;
-}
-
-#filtrosResultados div {
-    margin: 0 10px;
-    margin-top: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-/* Estilo para o input de data */
-input[type="date"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.buttonsWrapper {
-    display: flex;
-    align-items: center;
-    color: #fff;
-    max-width: 90vw;
-    margin: 0 auto;
-    justify-content: space-between;
-    margin-bottom: 32px;
-}
-
 .btn-alterar {
     background-color: #5f2172;
-}
-
-.buttonsContent {
-    display: flex;
-    gap: 16px;
 }
 
 .orientacoes-usu {
@@ -144,18 +58,6 @@ input[type="date"] {
     top: 28px;
 }
 
-/* table */
-
-.table-wrapper {
-    display: flex;
-    overflow: auto;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    scrollbar-width: thin;
-    margin-top: 32px;
-    height: 65vh;
-}
-
 .table {
     width: 100%;
     overflow-x: auto;
@@ -164,85 +66,4 @@ input[type="date"] {
 
 #tableRow th {
     padding: 10px;
-    /* white-space: nowrap; */
-}
-
-.tableColumn {
-    border: 1px solid #ddd;
-    padding: 8px;
-}
-
-.actionsContainer {
-    display: flex;
-    gap: 8px;
-}
-
-.actionEdit {
-    color: #fff;
-    background-color: #f39c12;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.actionEdit:hover {
-    color: #fff;
-    background-color: #d68708;
-    text-decoration: none;
-}
-
-.actionGuide {
-    cursor: pointer;
-    color: #fff;
-    background-color: #747474;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.actionGuide:hover {
-    color: #fff;
-    background-color: #535353;
-    text-decoration: none;
-}
-
-.actionDelete {
-    cursor: pointer;
-    color: #fff;
-    background-color: #ff0011;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-    height: 100%;
-}
-
-.actionDelete:hover {
-    color: #fff;
-    background-color: #aa000b;
-    text-decoration: none;
-}
-
-.actionDuplicate {
-    cursor: pointer;
-    height: 100%;
-    color: #fff;
-    background-color: #3498db;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    border: none;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.actionDuplicate:hover {
-    color: #fff;
-    background-color: #2980b9;
-    text-decoration: none;
 }

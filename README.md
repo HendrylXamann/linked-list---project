@@ -24,6 +24,9 @@ Antes de começar, certifique-se de ter acesso à internet, o Python e o pip ins
     pip3 install -r requirements.txt
     ```
 
+3. Verifique se há uma pasta chamada log no diretório principal do projeto:
+   3.1 - Dentro da pasta log, confirme se existe o arquivo chamado app.log 
+
 ## Executando o Projeto
 
 Para executar o projeto, siga estas etapas:
