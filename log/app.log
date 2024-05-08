@@ -1,0 +1,144 @@
+2024-05-04 18:40:11,410 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.15.9:5001
+2024-05-04 18:40:11,410 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-04 18:40:11,416 - INFO -  * Restarting with stat
+2024-05-04 18:40:11,925 - WARNING -  * Debugger is active!
+2024-05-04 18:40:11,937 - INFO -  * Debugger PIN: 131-474-273
+2024-05-04 18:40:13,447 - INFO - 127.0.0.1 - - [04/May/2024 18:40:13] "GET / HTTP/1.1" 200 -
+2024-05-04 18:40:13,693 - INFO - 127.0.0.1 - - [04/May/2024 18:40:13] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:13,733 - INFO - 127.0.0.1 - - [04/May/2024 18:40:13] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:13,734 - INFO - 127.0.0.1 - - [04/May/2024 18:40:13] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:14,172 - INFO - 127.0.0.1 - - [04/May/2024 18:40:14] "GET /routes HTTP/1.1" 200 -
+2024-05-04 18:40:14,242 - INFO - 127.0.0.1 - - [04/May/2024 18:40:14] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:14,249 - INFO - 127.0.0.1 - - [04/May/2024 18:40:14] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:14,252 - INFO - 127.0.0.1 - - [04/May/2024 18:40:14] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:18,309 - INFO - 127.0.0.1 - - [04/May/2024 18:40:18] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:40:18,364 - INFO - 127.0.0.1 - - [04/May/2024 18:40:18] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:18,367 - INFO - 127.0.0.1 - - [04/May/2024 18:40:18] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:18,370 - INFO - 127.0.0.1 - - [04/May/2024 18:40:18] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:19,992 - INFO - 127.0.0.1 - - [04/May/2024 18:40:19] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:40:20,048 - INFO - 127.0.0.1 - - [04/May/2024 18:40:20] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:20,050 - INFO - 127.0.0.1 - - [04/May/2024 18:40:20] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:20,055 - INFO - 127.0.0.1 - - [04/May/2024 18:40:20] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:20,859 - INFO - 127.0.0.1 - - [04/May/2024 18:40:20] "GET / HTTP/1.1" 200 -
+2024-05-04 18:40:20,916 - INFO - 127.0.0.1 - - [04/May/2024 18:40:20] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:20,919 - INFO - 127.0.0.1 - - [04/May/2024 18:40:20] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:20,926 - INFO - 127.0.0.1 - - [04/May/2024 18:40:20] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:21,441 - INFO - 127.0.0.1 - - [04/May/2024 18:40:21] "GET /create_user HTTP/1.1" 200 -
+2024-05-04 18:40:21,515 - INFO - 127.0.0.1 - - [04/May/2024 18:40:21] "[36mGET /static/m_users.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:21,528 - INFO - 127.0.0.1 - - [04/May/2024 18:40:21] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:21,529 - INFO - 127.0.0.1 - - [04/May/2024 18:40:21] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:23,900 - INFO - 127.0.0.1 - - [04/May/2024 18:40:23] "POST /create_user HTTP/1.1" 200 -
+2024-05-04 18:40:23,960 - INFO - 127.0.0.1 - - [04/May/2024 18:40:23] "[36mGET /static/m_users.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:23,963 - INFO - 127.0.0.1 - - [04/May/2024 18:40:23] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:23,964 - INFO - 127.0.0.1 - - [04/May/2024 18:40:23] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:25,274 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "GET / HTTP/1.1" 200 -
+2024-05-04 18:40:25,329 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:25,342 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:25,344 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:25,909 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "GET /routes HTTP/1.1" 200 -
+2024-05-04 18:40:25,981 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:25,990 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:25,992 - INFO - 127.0.0.1 - - [04/May/2024 18:40:25] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:40:28,595 - INFO - 127.0.0.1 - - [04/May/2024 18:40:28] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:40:28,655 - INFO - 127.0.0.1 - - [04/May/2024 18:40:28] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:28,656 - INFO - 127.0.0.1 - - [04/May/2024 18:40:28] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:40:28,661 - INFO - 127.0.0.1 - - [04/May/2024 18:40:28] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:42:01,606 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.15.9:5001
+2024-05-04 18:42:01,606 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-04 18:42:01,614 - INFO -  * Restarting with stat
+2024-05-04 18:42:02,574 - WARNING -  * Debugger is active!
+2024-05-04 18:42:02,586 - INFO -  * Debugger PIN: 131-474-273
+2024-05-04 18:42:02,612 - INFO - 127.0.0.1 - - [04/May/2024 18:42:02] "GET / HTTP/1.1" 200 -
+2024-05-04 18:42:02,811 - INFO - 127.0.0.1 - - [04/May/2024 18:42:02] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:02,830 - INFO - 127.0.0.1 - - [04/May/2024 18:42:02] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:42:02,832 - INFO - 127.0.0.1 - - [04/May/2024 18:42:02] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:03,495 - INFO - 127.0.0.1 - - [04/May/2024 18:42:03] "GET /routes HTTP/1.1" 200 -
+2024-05-04 18:42:03,563 - INFO - 127.0.0.1 - - [04/May/2024 18:42:03] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:03,573 - INFO - 127.0.0.1 - - [04/May/2024 18:42:03] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:03,574 - INFO - 127.0.0.1 - - [04/May/2024 18:42:03] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:42:42,035 - INFO -  * Detected change in 'd:\\PROGRAMACAO\\WIP\\UnB\\ED\\linked_list_project\\main.py', reloading
+2024-05-04 18:42:42,090 - INFO -  * Restarting with stat
+2024-05-04 18:42:42,589 - WARNING -  * Debugger is active!
+2024-05-04 18:42:42,602 - INFO -  * Debugger PIN: 131-474-273
+2024-05-04 18:42:44,644 - INFO -  * Detected change in 'd:\\PROGRAMACAO\\WIP\\UnB\\ED\\linked_list_project\\main.py', reloading
+2024-05-04 18:42:44,711 - INFO -  * Restarting with stat
+2024-05-04 18:42:45,284 - WARNING -  * Debugger is active!
+2024-05-04 18:42:45,299 - INFO -  * Debugger PIN: 131-474-273
+2024-05-04 18:42:49,360 - INFO -  * Detected change in 'd:\\PROGRAMACAO\\WIP\\UnB\\ED\\linked_list_project\\main.py', reloading
+2024-05-04 18:42:49,412 - INFO -  * Restarting with stat
+2024-05-04 18:42:49,934 - WARNING -  * Debugger is active!
+2024-05-04 18:42:49,948 - INFO -  * Debugger PIN: 131-474-273
+2024-05-04 18:42:54,724 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.15.9:5001
+2024-05-04 18:42:54,724 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-04 18:42:54,733 - INFO -  * Restarting with stat
+2024-05-04 18:42:55,287 - WARNING -  * Debugger is active!
+2024-05-04 18:42:55,301 - INFO -  * Debugger PIN: 131-474-273
+2024-05-04 18:42:55,333 - INFO - 127.0.0.1 - - [04/May/2024 18:42:55] "GET / HTTP/1.1" 200 -
+2024-05-04 18:42:55,568 - INFO - 127.0.0.1 - - [04/May/2024 18:42:55] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:55,586 - INFO - 127.0.0.1 - - [04/May/2024 18:42:55] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:55,606 - INFO - 127.0.0.1 - - [04/May/2024 18:42:55] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:42:56,480 - INFO - 127.0.0.1 - - [04/May/2024 18:42:56] "GET /routes HTTP/1.1" 200 -
+2024-05-04 18:42:56,550 - INFO - 127.0.0.1 - - [04/May/2024 18:42:56] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:56,556 - INFO - 127.0.0.1 - - [04/May/2024 18:42:56] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:56,564 - INFO - 127.0.0.1 - - [04/May/2024 18:42:56] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:42:59,287 - INFO - 127.0.0.1 - - [04/May/2024 18:42:59] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:42:59,339 - INFO - 127.0.0.1 - - [04/May/2024 18:42:59] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:42:59,344 - INFO - 127.0.0.1 - - [04/May/2024 18:42:59] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:42:59,350 - INFO - 127.0.0.1 - - [04/May/2024 18:42:59] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:03,589 - INFO - 127.0.0.1 - - [04/May/2024 18:43:03] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:43:03,652 - INFO - 127.0.0.1 - - [04/May/2024 18:43:03] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:03,655 - INFO - 127.0.0.1 - - [04/May/2024 18:43:03] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:03,657 - INFO - 127.0.0.1 - - [04/May/2024 18:43:03] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:07,267 - INFO - 127.0.0.1 - - [04/May/2024 18:43:07] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:43:07,328 - INFO - 127.0.0.1 - - [04/May/2024 18:43:07] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:07,332 - INFO - 127.0.0.1 - - [04/May/2024 18:43:07] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:07,334 - INFO - 127.0.0.1 - - [04/May/2024 18:43:07] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:10,037 - INFO - 127.0.0.1 - - [04/May/2024 18:43:10] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:43:10,088 - INFO - 127.0.0.1 - - [04/May/2024 18:43:10] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:10,092 - INFO - 127.0.0.1 - - [04/May/2024 18:43:10] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:10,093 - INFO - 127.0.0.1 - - [04/May/2024 18:43:10] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:13,146 - INFO - 127.0.0.1 - - [04/May/2024 18:43:13] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:43:13,206 - INFO - 127.0.0.1 - - [04/May/2024 18:43:13] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:13,208 - INFO - 127.0.0.1 - - [04/May/2024 18:43:13] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:13,216 - INFO - 127.0.0.1 - - [04/May/2024 18:43:13] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:15,770 - INFO - 127.0.0.1 - - [04/May/2024 18:43:15] "GET / HTTP/1.1" 200 -
+2024-05-04 18:43:15,833 - INFO - 127.0.0.1 - - [04/May/2024 18:43:15] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:15,837 - INFO - 127.0.0.1 - - [04/May/2024 18:43:15] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:15,838 - INFO - 127.0.0.1 - - [04/May/2024 18:43:15] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:16,897 - INFO - 127.0.0.1 - - [04/May/2024 18:43:16] "GET /create_user HTTP/1.1" 200 -
+2024-05-04 18:43:16,972 - INFO - 127.0.0.1 - - [04/May/2024 18:43:16] "[36mGET /static/m_users.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:16,982 - INFO - 127.0.0.1 - - [04/May/2024 18:43:16] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:16,984 - INFO - 127.0.0.1 - - [04/May/2024 18:43:16] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:19,797 - INFO - 127.0.0.1 - - [04/May/2024 18:43:19] "POST /create_user HTTP/1.1" 200 -
+2024-05-04 18:43:19,851 - INFO - 127.0.0.1 - - [04/May/2024 18:43:19] "[36mGET /static/m_users.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:19,854 - INFO - 127.0.0.1 - - [04/May/2024 18:43:19] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:19,862 - INFO - 127.0.0.1 - - [04/May/2024 18:43:19] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:21,441 - INFO - 127.0.0.1 - - [04/May/2024 18:43:21] "GET / HTTP/1.1" 200 -
+2024-05-04 18:43:21,498 - INFO - 127.0.0.1 - - [04/May/2024 18:43:21] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:21,502 - INFO - 127.0.0.1 - - [04/May/2024 18:43:21] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:21,504 - INFO - 127.0.0.1 - - [04/May/2024 18:43:21] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:22,020 - INFO - 127.0.0.1 - - [04/May/2024 18:43:22] "GET /routes HTTP/1.1" 200 -
+2024-05-04 18:43:22,090 - INFO - 127.0.0.1 - - [04/May/2024 18:43:22] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:22,098 - INFO - 127.0.0.1 - - [04/May/2024 18:43:22] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:22,101 - INFO - 127.0.0.1 - - [04/May/2024 18:43:22] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:25,669 - INFO - 127.0.0.1 - - [04/May/2024 18:43:25] "POST /routes HTTP/1.1" 200 -
+2024-05-04 18:43:25,726 - INFO - 127.0.0.1 - - [04/May/2024 18:43:25] "[36mGET /static/r_manager.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:25,732 - INFO - 127.0.0.1 - - [04/May/2024 18:43:25] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:25,734 - INFO - 127.0.0.1 - - [04/May/2024 18:43:25] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:27,529 - INFO - 127.0.0.1 - - [04/May/2024 18:43:27] "GET / HTTP/1.1" 200 -
+2024-05-04 18:43:27,587 - INFO - 127.0.0.1 - - [04/May/2024 18:43:27] "[36mGET /static/home.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:27,598 - INFO - 127.0.0.1 - - [04/May/2024 18:43:27] "[36mGET /static/menu.css HTTP/1.1[0m" 304 -
+2024-05-04 18:43:27,599 - INFO - 127.0.0.1 - - [04/May/2024 18:43:27] "[36mGET /static/logo2.png HTTP/1.1[0m" 304 -
+2024-05-04 18:43:32,696 - INFO -  * Detected change in 'd:\\PROGRAMACAO\\WIP\\UnB\\ED\\linked_list_project\\main.py', reloading
+2024-05-04 18:43:32,761 - INFO -  * Restarting with stat
+2024-05-04 18:43:33,221 - WARNING -  * Debugger is active!
+2024-05-04 18:43:33,234 - INFO -  * Debugger PIN: 131-474-273

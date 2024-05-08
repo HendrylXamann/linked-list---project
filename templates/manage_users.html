@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de colaboradores</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='m_users.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
 </head>
 
 <body>
     <div style=" background: linear-gradient(90.22deg, #FFFFFF -47.1%, #8a2bca 122.42%);">
         <menu>
             <a href="/">
-                <img src="{{url_for('static', filename='logo.png')}}">
+                <img src="{{url_for('static', filename='logo2.png')}}" style="max-width: 300px; max-height: 50px;">
             </a>
             <div class="buttons-menu-wrapper">
-                <a class="menu-button" href="{{ url_for('infos') }}">
+                <a class="menu-button" href="/manual">
                     Orientações de uso
                 </a>
             </div>
@@ -24,7 +25,7 @@
 
     <div class="backgroundWrapperRegisterUser">
         <h1 class="titleWrapper">Criar usuário</h1>
-        <form action="/registro_usuarios" method="post">
+        <form action="/create_user" method="post">
             <div class="containerApp">
                 <div class="contentRegisterUser">
                     <div class="inputsRegisterUserWrapper">
@@ -34,13 +35,17 @@
                         </div>
 
                         <div class="inputWrapperUser">
-                            <label for="tipo_veiculo">Veículo:</label>
-                            <input type="text" id="veiculo" name="veiculo" required>
+                            <label for="tipo_veiculo">Tipo de veículo:</label>
+                            <select id="tipo_veiculo" name="tipo_veiculo" required>
+                                <option value="moto">Moto</option>
+                                <option value="passeio">Passeio</option>
+                                <option value="truck">Caminhão</option>
+                            </select>
                         </div>
 
                         <div class="inputWrapperUser">
-                            <label for="validar_cnh">CNH Válida:</label>
-                            <select id="validar_cnh" name="validar_cnh" required>
+                            <label for="cnh">CNH Válida:</label>
+                            <select id="cnh" name="cnh" required>
                                 <option value="sim">Sim</option>
                                 <option value="nao">Não</option>
                             </select>
@@ -54,8 +59,14 @@
             </div>
         </form>
     </div>
-
-    <script type="text/javascript" src="m_users.js"> </script>
 </body>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+        var mensagem = "{{ message }}";
+        if (mensagem) {
+            alert(mensagem);
+        }
+    });
+</script>
 
 </html>
