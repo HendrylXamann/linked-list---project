@@ -1,3 +1,5 @@
+import datetime
+
 class Noh:
     def __init__(self, rota, funcionario, prioridade):
         self.rota = rota
@@ -11,7 +13,6 @@ class ArvoreBiBusca:
         self.raiz = None
         self.nos = {} 
 
-    #Plus 1
     def inserir(self, rota, funcionario, prioridade):
         novo_noh = Noh(rota, funcionario, prioridade)
         self.nos[rota] = novo_noh
@@ -44,6 +45,7 @@ class ArvoreBiBusca:
         elif rota > noh.rota:
             noh.direita = self._delete(noh.direita, rota)
         else:
+            
             if noh.esquerda is None:
                 return noh.direita
             elif noh.direita is None:
@@ -54,13 +56,14 @@ class ArvoreBiBusca:
             noh.funcionario = temp.funcionario
             noh.prioridade = temp.prioridade
             noh.direita = self._delete(noh.direita, temp.rota)
+
         return noh
 
     def _menorValorNoh(self, noh):
-        current = noh
-        while(current.esquerda is not None):
-            current = current.esquerda
-        return current
+        atual = noh
+        while(atual.esquerda is not None):
+            atual = atual.esquerda
+        return atual
 
     def busca(self, rota):
         return self._busca(self.raiz, rota)
@@ -72,9 +75,11 @@ class ArvoreBiBusca:
             return self._busca(noh.direita, rota)
         return self._busca(noh.esquerda, rota)
     
-    # def listar_rotas(self):
-    #     return self._listar_rotas(self.raiz, [])
-    
+    #Plus 2
+    def listar_rotas(self):
+        rotas = self._listar_rotas(self.raiz)
+        return sorted(rotas, key=lambda rota: rota[2])
+    """simples(basico)
     def listar_rotas(self):
         rotas = self._listar_rotas(self.raiz, [])
         return sorted(rotas, key=lambda rota: rota[2])
@@ -84,6 +89,22 @@ class ArvoreBiBusca:
             self._listar_rotas(noh.esquerda, rotas)
             rotas.append((noh.rota, noh.funcionario, noh.prioridade))
             self._listar_rotas(noh.direita, rotas)
+        return rotas
+    """
+    def _listar_rotas(self, raiz):
+        rotas = []
+        pilha = []
+        noh_atual = raiz
+        while True:
+            while noh_atual is not None:
+                pilha.append(noh_atual)
+                noh_atual = noh_atual.esquerda
+            if pilha:
+                noh_atual = pilha.pop()
+                rotas.append((noh_atual.rota, noh_atual.funcionario, noh_atual.prioridade))
+                noh_atual = noh_atual.direita
+            else:
+                break
         return rotas
     
     def inserir_por_prioridade(self, rota, funcionario, prioridade):
@@ -106,17 +127,15 @@ class ArvoreBiBusca:
                 self._inserir_por_prioridade(noh.direita, novo_noh)
     
     def alterar_prioridade(self, rota_id, nova_prioridade):
-        # noh = self.busca(rota_id)
         noh = self.nos.get(rota_id)
         if noh:
-            print(f"Alterando prioridade da rota {rota_id} para {nova_prioridade}")
-            # self.delete(rota_id)
-            # self.inserir_por_prioridade(noh.rota, noh.funcionario, nova_prioridade)
+            print(f"A rota {rota_id} terá prioridade: {nova_prioridade}")
             noh.prioridade = nova_prioridade  
 
     def alterar_funcionario(self, rota_id, novo_funcionario):
-        # noh = self.busca(rota_id)
         noh = self.nos.get(rota_id) 
         if noh:
-            print(f"Alterando funcionário da rota {rota_id} para {novo_funcionario}")
+            print(f"A rota  {rota_id} terá o funcionário: {novo_funcionario}")
             noh.funcionario = novo_funcionario
+
+
