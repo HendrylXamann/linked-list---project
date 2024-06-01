@@ -1,6 +1,6 @@
-# Linked List Project
+# Binary Tree Project
 
-Este é um projeto feito em Python utilizando Flask com o objetivo de demonstrar conhecimentos em listas encadeadas.
+Este é um projeto feito em Python utilizando Flask com o objetivo de demonstrar conhecimentos em Árvores binárias.
 
 ## Instalação
 
@@ -9,7 +9,7 @@ Antes de começar, certifique-se de ter acesso à internet, o Python e o pip ins
 1. Navegue até o diretório do projeto:
 
     ```bash
-    cd linked-list-project
+    cd tp2_Hendryl_Roberto
     ```
 
 2. Instale todas as dependências listadas no arquivo `requirements.txt`:

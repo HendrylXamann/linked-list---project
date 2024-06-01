@@ -101,10 +101,12 @@ class ArvoreBiBusca:
     def alterar_prioridade(self, rota_id, nova_prioridade):
         noh = self.busca(rota_id)
         if noh:
+            print(f"Alterando prioridade da rota {rota_id} para {nova_prioridade}")
             self.delete(rota_id)
             self.inserir_por_prioridade(noh.rota, noh.funcionario, nova_prioridade)
 
     def alterar_funcionario(self, rota_id, novo_funcionario):
         noh = self.busca(rota_id)
         if noh:
+            print(f"Alterando funcionário da rota {rota_id} para {novo_funcionario}")
             noh.funcionario = novo_funcionario
