@@ -7,8 +7,10 @@ class Noh:
         self.prioridade = prioridade
         self.esquerda = None
         self.direita = None
+        self.deletado = False
+        self.duplicatas = []
 
-class ArvoreBiBusca:
+class Arvore:
     def __init__(self):
         self.raiz = None
         self.nos = {} 
@@ -36,6 +38,8 @@ class ArvoreBiBusca:
     def delete(self, rota):
         self.raiz = self._delete(self.raiz, rota)
 
+    """Plus 1
+    simples(basico)
     def _delete(self, noh, rota):
         if noh is None:
             return noh
@@ -45,7 +49,6 @@ class ArvoreBiBusca:
         elif rota > noh.rota:
             noh.direita = self._delete(noh.direita, rota)
         else:
-            
             if noh.esquerda is None:
                 return noh.direita
             elif noh.direita is None:
@@ -56,6 +59,39 @@ class ArvoreBiBusca:
             noh.funcionario = temp.funcionario
             noh.prioridade = temp.prioridade
             noh.direita = self._delete(noh.direita, temp.rota)
+        return noh
+    """
+    
+    def _delete(self, noh, rota):
+        if noh is None:
+            return noh
+
+        if rota < noh.rota:
+            noh.esquerda = self._delete(noh.esquerda, rota)
+        elif rota > noh.rota:
+            noh.direita = self._delete(noh.direita, rota)
+        else:
+            if noh.deletado:
+                return noh
+
+            if noh.duplicatas:
+                duplicata = noh.duplicatas.pop()
+                noh.rota = duplicata.rota
+                noh.funcionario = duplicata.funcionario
+                noh.prioridade = duplicata.prioridade
+            else:
+                noh.deletado = True
+                noh.timestamp_delecao = datetime.datetime.now()
+                if noh.esquerda is None:
+                    return noh.direita
+                elif noh.direita is None:
+                    return noh.esquerda
+
+                temp = self._menorValorNoh(noh.direita)
+                noh.rota = temp.rota
+                noh.funcionario = temp.funcionario
+                noh.prioridade = temp.prioridade
+                noh.direita = self._delete(noh.direita, temp.rota)
 
         return noh
 

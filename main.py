@@ -28,7 +28,7 @@ usuarios = [("Kant", "moto", "sim"), ("Nietzsche", "moto", "sim"), ("Schopenhaue
 [usu.adicionar_usuario(*usuario) for usuario in usuarios]
 
 rotas = [(1, 3, "Kant"), (2, 2, "Nietzsche"), (3, 1, "Schopenhauer"), (4, 3, "Hegel")]
-arvore_rotas = ArvoreBiBusca()
+arvore_rotas = Arvore()
 [arvore_rotas.inserir(id, funcionario, prioridade) for id, prioridade, funcionario in rotas]
 
 @app.route("/")
@@ -75,7 +75,7 @@ def route_managementTp2():
                     if novo_usuario:
                         arvore_rotas.alterar_funcionario(rota_id, novo_usuario.nome)
                     pass
-                
+
         for rota_id in rotas_para_excluir:
             print(f"Excluindo rota {rota_id}")
             arvore_rotas.delete(rota_id)
