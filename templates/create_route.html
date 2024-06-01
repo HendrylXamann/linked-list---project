@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerenciador de colaboradores</title>
+    <title>Criação de rotas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='m_users.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
 </head>
@@ -24,35 +24,37 @@
     </div>
 
     <div class="backgroundWrapperRegisterUser">
-        <h1 class="titleWrapper">Criar usuário</h1>
-        <form action="/create_user" method="post">
+        <h1 class="titleWrapper">Criar rota</h1>
+        <form action="/create_route" method="post">
             <div class="containerApp">
                 <div class="contentRegisterUser">
                     <div class="inputsRegisterUserWrapper">
                         <div class="inputWrapperUser">
-                            <label for="nome">Nome:</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <label for="rota_id">Rota:</label>
+                            <input type="number" id="rota_id" name="rota_id" required placeholder="Digite um número">
                         </div>
 
                         <div class="inputWrapperUser">
-                            <label for="tipo_veiculo">Tipo de veículo:</label>
-                            <select id="tipo_veiculo" name="tipo_veiculo" required>
-                                <option value="moto">Moto</option>
-                                <option value="passeio">Passeio</option>
-                                <option value="truck">Caminhão</option>
+                            <label for="funcionario_rota">Funcionários:</label>
+                            <select id="funcionario_rota" name="funcionario_rota" required>
+                                <option value="kant">Kant</option>
+                                <option value="hegel">Hegel</option>
+                                <option value="nietzsche">Nietzsche</option>
+                                <option value="schopenhauer">Schopenhauer</option>
                             </select>
                         </div>
 
                         <div class="inputWrapperUser">
-                            <label for="cnh">CNH Válida:</label>
-                            <select id="cnh" name="cnh" required>
-                                <option value="sim">Sim</option>
-                                <option value="nao">Não</option>
+                            <label for="prioridade_rota">Prioridade de entrega:</label>
+                            <select id="prioridade_rota" name="prioridade_rota" required>
+                                <option value="1">1 - Urgente</option>
+                                <option value="2">2 - Alta</option>
+                                <option value="3">3 - Padrão</option>
                             </select>
                         </div>
 
                         <div>
-                            <button type="submit">Enviar</button>
+                            <button type="submit">Criar</button>
                         </div>
                     </div>
                 </div>

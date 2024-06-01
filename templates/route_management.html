@@ -26,12 +26,12 @@
         </menu>
     </div>
     <div class="container">
-        <h1>Gerenciamento de Rotas</h1>
+        <h1>Ordenação de Rotas</h1>
         <form method="POST" action="/routes">
             <table id="tableRow" class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>
+                        <th>Rota</th>
                         <th>Prioridade</th>
                         <th>Funcionário</th>
                         <th>Excluir</th>
@@ -40,34 +40,43 @@
                 <tbody>
                     {% for rota in rotas %}
                     <tr>
-                        <td>{{ rota.id }}</td>
+                        <td>{{ rota[0] }}</td>
                         <td>
-                            <select name="prioridade_{{ rota.id }}" required>
-                                <option value="1" {% if rota.prioridade==1 %} selected {% endif %}>1</option>
-                                <option value="2" {% if rota.prioridade==2 %} selected {% endif %}>2</option>
-                                <option value="3" {% if rota.prioridade==3 %} selected {% endif %}>3</option>
+                            <select name="prioridade_{{ rota[0] }}" required>
+                                <option value="1" {% if rota.prioridade==1 %} selected {% endif %}>1 - Urgente</option>
+                                <option value="2" {% if rota.prioridade==2 %} selected {% endif %}>2 - Alta</option>
+                                <option value="3" {% if rota.prioridade==3 %} selected {% endif %}>3 - Padrão</option>
                             </select>
                         </td>
                         <td>
-                            <select name="funcionario_{{ rota.id }}" required>
+                            <select name="funcionario_{{ rota[0] }}" required>
                                 {% for funcionario in funcionarios %}
-                                <option value="{{ funcionario }}" {% if rota.funcionario==funcionario %} selected {%
-                                    endif %}>{{ funcionario }}</option>
+                                <option value="{{ funcionario.nome }}" {% if rota[1]==funcionario.nome %} selected {%
+                                    endif %}>
+                                    {{ funcionario.nome }}
+                                </option>
                                 {% endfor %}
                             </select>
                         </td>
                         <td>
-                            <input type="checkbox" name="excluir_{{ rota.id }}" value="true">
+                            <input type="checkbox" name="excluir_{{ rota[0] }}" value="true">
                         </td>
-                        <input type="hidden" name="id_{{ rota.id }}" value="{{ rota.id }}">
+                        <input type="hidden" name="id_{{ rota[0] }}" value="{{ rota[0] }}">
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
             <br>
-            <button type="submit" class="btn btn-primary"
-                style="background-color: #5f2172; display: block; margin: 0 auto;" id="reloadButton">Alterar</button>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary" style="background-color: #5f2172;"
+                    id="reloadButton">Alterar</button>
+                <button type="button" class="btn btn-primary" style="background-color: #5f2172;"
+                    onclick="location.href='/create_route'">Criar
+                    rota</button>
+            </div>
         </form>
+
     </div>
 
 </body>
