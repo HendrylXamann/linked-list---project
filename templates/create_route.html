@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de rotas</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='m_users.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='create_route.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
 </head>
 
@@ -31,16 +31,17 @@
                     <div class="inputsRegisterUserWrapper">
                         <div class="inputWrapperUser">
                             <label for="rota_id">Rota:</label>
-                            <input type="number" id="rota_id" name="rota_id" required placeholder="Digite um número">
+                            <input type="number" id="rota_id" name="rota_id" required
+                                placeholder="Um número entre 5 e 10">
                         </div>
 
                         <div class="inputWrapperUser">
                             <label for="funcionario_rota">Funcionários:</label>
                             <select id="funcionario_rota" name="funcionario_rota" required>
-                                <option value="kant">Kant</option>
-                                <option value="hegel">Hegel</option>
-                                <option value="nietzsche">Nietzsche</option>
-                                <option value="schopenhauer">Schopenhauer</option>
+                                <option value="Schopenhauer">Schopenhauer</option>
+                                <option value="Kant">Kant</option>
+                                <option value="Hegel">Hegel</option>
+                                <option value="Nietzsche">Nietzsche</option>
                             </select>
                         </div>
 
@@ -53,8 +54,10 @@
                             </select>
                         </div>
 
-                        <div>
+                        <div class="button-group">
                             <button type="submit">Criar</button>
+                            <button type="button" class="btn btn-primary" style="background-color: #5f2172;"
+                                onclick="location.href='/routes'">Administrar rotas</button>
                         </div>
                     </div>
                 </div>

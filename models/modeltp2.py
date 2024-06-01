@@ -9,16 +9,19 @@ class Noh:
 class ArvoreBiBusca:
     def __init__(self):
         self.raiz = None
+        self.nos = {} 
 
+    #Plus 1
     def inserir(self, rota, funcionario, prioridade):
         novo_noh = Noh(rota, funcionario, prioridade)
+        self.nos[rota] = novo_noh
         if self.raiz is None:
             self.raiz = novo_noh
         else:
             self._inserir(self.raiz, novo_noh)
 
     def _inserir(self, noh, novo_noh):
-        if novo_noh.prioridade < noh.prioridade:
+        if int(novo_noh.prioridade) < int(noh.prioridade):
             if noh.esquerda is None:
                 noh.esquerda = novo_noh
             else:
@@ -69,8 +72,12 @@ class ArvoreBiBusca:
             return self._busca(noh.direita, rota)
         return self._busca(noh.esquerda, rota)
     
+    # def listar_rotas(self):
+    #     return self._listar_rotas(self.raiz, [])
+    
     def listar_rotas(self):
-        return self._listar_rotas(self.raiz, [])
+        rotas = self._listar_rotas(self.raiz, [])
+        return sorted(rotas, key=lambda rota: rota[2])
 
     def _listar_rotas(self, noh, rotas):
         if noh:
@@ -99,14 +106,17 @@ class ArvoreBiBusca:
                 self._inserir_por_prioridade(noh.direita, novo_noh)
     
     def alterar_prioridade(self, rota_id, nova_prioridade):
-        noh = self.busca(rota_id)
+        # noh = self.busca(rota_id)
+        noh = self.nos.get(rota_id)
         if noh:
             print(f"Alterando prioridade da rota {rota_id} para {nova_prioridade}")
-            self.delete(rota_id)
-            self.inserir_por_prioridade(noh.rota, noh.funcionario, nova_prioridade)
+            # self.delete(rota_id)
+            # self.inserir_por_prioridade(noh.rota, noh.funcionario, nova_prioridade)
+            noh.prioridade = nova_prioridade  
 
     def alterar_funcionario(self, rota_id, novo_funcionario):
-        noh = self.busca(rota_id)
+        # noh = self.busca(rota_id)
+        noh = self.nos.get(rota_id) 
         if noh:
             print(f"Alterando funcionário da rota {rota_id} para {novo_funcionario}")
             noh.funcionario = novo_funcionario

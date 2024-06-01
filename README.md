@@ -31,7 +31,7 @@ Antes de começar, certifique-se de ter acesso à internet, o Python e o pip ins
 
 Para executar o projeto, siga estas etapas:
 
-1. Vá até o arquivo `main.py` e execute-o:
+1. Vá até a pasta com o arquivo `main.py`, abra o terminal e execute o comando:
 
     ```bash
     python main.py
